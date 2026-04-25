@@ -9,7 +9,31 @@
             font-family: 'Gelio Fasolada';
             src: url('fonts/Gelio Fasolada.ttf') format('truetype');
         }
-        body { min-height:100vh; margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f7f9fb; }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: repeating-linear-gradient(
+                120deg,
+                #f8f9fa,
+                #f8f9fa 40px,
+                #e9ecef 40px,
+                #e9ecef 80px
+            ), 
+            repeating-linear-gradient(
+                60deg,
+                #f8f9fa,
+                #f8f9fa 40px,
+                #dee2e6 40px,
+                #dee2e6 80px
+            );
+            background-blend-mode: lighten;
+            animation: bgmove 30s linear infinite;
+        }
+        @keyframes bgmove {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 200px 200px, -200px -200px; }
+        }
         header { background:rgba(255,255,255,0.95); padding:1.5rem; text-align:center; border-bottom:1px solid #ddd; }
         nav { text-align:center; margin:0.8rem 0; }
         nav a { margin:0 1rem; color:#2d3a4b; text-decoration:none; font-family: 'Gelio Fasolada', 'Georgia', serif; }
@@ -17,6 +41,7 @@
         h1 { font-family: 'Gelio Fasolada', 'Georgia', serif; font-size:2rem; }
         .site-logo { height:157px; max-width:100%; vertical-align:middle; }
         h2 { font-family: 'Gelio Fasolada', 'Georgia', serif; color:#495057; }
+        .footer { text-align: center; color: #adb5bd; font-size: 0.95rem; margin: 2rem 0 1rem 0; }
         @media (max-width: 768px) {
             header { padding:1rem; }
             nav { margin:0.5rem 0; }
@@ -48,7 +73,7 @@
             <li><strong>Community</strong> — Collaborations and updates.</li>
         </ul>
     </main>
-    <footer style="text-align:center;color:#9aa; margin:2rem 0">&copy; <span id="current-year"></span> Emp0ros</footer>
+    <div class="footer">&copy; <span id="current-year"></span> Team Emp0ros. All rights reserved.</div>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
