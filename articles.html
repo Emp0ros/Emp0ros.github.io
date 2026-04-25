@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Articles - Emp0ros</title>
+    <style>
+        @font-face {
+            font-family: 'Gelio Fasolada';
+            src: url('fonts/Gelio Fasolada.ttf') format('truetype');
+        }
+        body { min-height:100vh; margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f7f9fb; }
+        header { background:rgba(255,255,255,0.95); padding:1.5rem; text-align:center; border-bottom:1px solid #ddd; }
+        nav { text-align:center; margin:0.8rem 0; }
+        nav a { margin:0 1rem; color:#2d3a4b; text-decoration:none; font-family: 'Gelio Fasolada', 'Georgia', serif; }
+        main { max-width:700px; margin:2rem auto; background:#fff; padding:2rem; border-radius:10px; }
+        h1 { font-family: 'Gelio Fasolada', 'Georgia', serif; font-size:2rem; }
+        .site-logo { height:157px; max-width:100%; vertical-align:middle; }
+        h2 { font-family: 'Gelio Fasolada', 'Georgia', serif; color:#495057; }
+        @media (max-width: 768px) {
+            header { padding:1rem; }
+            nav { margin:0.5rem 0; }
+            nav a { margin:0 0.5rem; font-size:1rem; }
+            main { margin:1rem auto; padding:1rem; }
+            h1 { font-size:1.5rem; }
+            .site-logo { height:100px; }
+            h2 { margin-top:1rem; }
+            footer { margin:1rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/"><img src="logo.png" alt="Emp0ros — Articles" class="site-logo"></a></h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/items.html">Items</a>
+        <a href="/releases.html">Releases</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    <main>
+        <h2>Latest</h2>
+        <ul>
+            <li><strong>Voyages & Trade</strong> — Notes on exploration and curation.</li>
+            <li><strong>Craft & Material</strong> — Stories behind our items.</li>
+            <li><strong>Community</strong> — Collaborations and updates.</li>
+        </ul>
+    </main>
+    <footer style="text-align:center;color:#9aa; margin:2rem 0">&copy; <span id="current-year"></span> Emp0ros</footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

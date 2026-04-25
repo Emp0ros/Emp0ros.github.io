@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact - Emp0ros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Gelio Fasolada';
+            src: url('fonts/Gelio Fasolada.ttf') format('truetype');
+        }
+        body { min-height:100vh; margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f7f9fb; }
+        header { background:rgba(255,255,255,0.95); padding:1.5rem; text-align:center; border-bottom:1px solid #ddd; }
+        nav { text-align:center; margin:0.8rem 0; }
+        nav a { margin:0 1rem; color:#2d3a4b; text-decoration:none; font-family: 'Gelio Fasolada', 'Georgia', serif; }
+        main { max-width:700px; margin:2rem auto; background:#fff; padding:2rem; border-radius:10px; }
+        h1 { font-family: 'Gelio Fasolada', 'Georgia', serif; font-size:2rem; }
+        .site-logo { height:157px; max-width:100%; vertical-align:middle; }
+        h2 { font-family: 'Gelio Fasolada', 'Georgia', serif; color:#495057; }
+        form { display:grid; gap:0.8rem; }
+        input, textarea { padding:0.6rem; border:1px solid #ddd; border-radius:6px; }
+        button { padding:0.6rem 1rem; background:#0077b6; color:#fff; border:none; border-radius:6px; }
+        .social-links { text-align: center; margin-top: 2rem; }
+        .social-links a { color: #2d3a4b; text-decoration: none; margin: 0 1rem; font-family: 'Gelio Fasolada', 'Georgia', serif; transition: color 0.2s; }
+        .social-links a:hover { color: #0077b6; }
+        @media (max-width: 768px) {
+            header { padding:1rem; }
+            nav { margin:0.5rem 0; }
+            nav a { margin:0 0.5rem; font-size:1rem; }
+            main { margin:1rem auto; padding:1rem; }
+            h1 { font-size:1.5rem; }
+            .site-logo { height:100px; }
+            h2 { margin-top:1rem; }
+            form { gap:0.5rem; }
+            input, textarea { padding:0.5rem; }
+            button { padding:0.5rem 0.8rem; }
+            footer { margin:1rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/"><img src="logo.png" alt="Contact Emp0ros" class="site-logo"></a></h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/items.html">Items</a>
+        <a href="/releases.html">Releases</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    <main>
+        <h2>Send a message</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your name">
+            <input type="email" name="email" placeholder="Your email">
+            <textarea name="message" rows="6" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <section>
+            <h2>Connect with Us</h2>
+            <div class="social-links">
+                <a href="https://x.com/Emp0ros" target="_blank"><i class="fab fa-x-twitter"></i> X</a>
+                <a href="https://discord.gg/Emp0ros" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+            </div>
+        </section>
+    </main>
+    <footer style="text-align:center;color:#9aa; margin:2rem 0">&copy; <span id="current-year"></span> Emp0ros</footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

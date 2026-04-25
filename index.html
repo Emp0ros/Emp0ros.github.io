@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Emp0ros</title>
+    <style>
+        @font-face {
+            font-family: 'Gelio Fasolada';
+            src: url('fonts/Gelio Fasolada.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Gelio Fasolada';
+            src: url('fonts/Gelio Fasolada.ttf') format('truetype');
+        }
+        /* Nautical/terrestrial chart-inspired dynamic background */
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: repeating-linear-gradient(
+                120deg,
+                #f8f9fa,
+                #f8f9fa 40px,
+                #e9ecef 40px,
+                #e9ecef 80px
+            ), 
+            repeating-linear-gradient(
+                60deg,
+                #f8f9fa,
+                #f8f9fa 40px,
+                #dee2e6 40px,
+                #dee2e6 80px
+            );
+            background-blend-mode: lighten;
+            animation: bgmove 30s linear infinite;
+        }
+        @keyframes bgmove {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 200px 200px, -200px -200px; }
+        }
+        header {
+            background: rgba(255,255,255,0.85);
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #ced4da;
+        }
+        nav {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #2d3a4b;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-family: 'Gelio Fasolada', 'Georgia', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #0077b6;
+        }
+        main {
+            max-width: 700px;
+            margin: 2rem auto;
+            background: rgba(255,255,255,0.92);
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(44,62,80,0.07);
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Gelio Fasolada', 'Georgia', serif;
+            font-size: 2.5rem;
+            letter-spacing: 0.05em;
+            color: #2d3a4b;
+            margin-bottom: 0.5rem;
+        }
+        .site-logo { height: 157px; max-width: 100%; vertical-align: middle; }
+        h2 {
+            font-family: 'Gelio Fasolada', 'Georgia', serif;
+            color: #495057;
+            margin-top: 2rem;
+            text-decoration: underline;
+        }
+        blockquote {
+            font-style: italic;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        .footer {
+            text-align: center;
+            color: #adb5bd;
+            font-size: 0.95rem;
+            margin: 2rem 0 1rem 0;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            nav {
+                margin: 0.5rem 0;
+            }
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 1rem;
+            }
+            main {
+                margin: 1rem auto;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .site-logo {
+                height: 100px;
+            }
+            h2 {
+                margin-top: 1rem;
+            }
+            .footer {
+                margin: 1rem 0 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/"><img src="logo.png" alt="Emp0ros" class="site-logo"></a></h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/items.html">Items</a>
+        <a href="/releases.html">Releases</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Emp0ros</h2>
+            <blockquote>ἔμπορος (émporos): a merchant, trader, or one who travels by sea for trade.</blockquote>
+        </section>
+        <h2>The Team</h2>
+        <p>
+            Emp0ros is an international team of researchers specialized in hardware, logistics, reverse engineering and repairs. Here you can find, purchase and discuss some of the most obscure and interesting products from all the corners of the world.
+        </p>
+        <section>
+            <h2>Explore</h2>
+            <ul>
+                <li><a href="/articles.html">Read our Articles</a></li>
+                <li><a href="/items.html">Browse Items for Sale</a></li>
+                <li><a href="/releases.html">View Software Releases</a></li>
+                <li><a href="/contact.html">Contact the Team</a></li>
+            </ul>
+        </section>
+    </main>
+    <div class="footer">
+        &copy; <span id="current-year"></span> Team Emp0ros. All rights reserved.
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

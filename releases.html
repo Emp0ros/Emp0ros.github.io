@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Releases - Emp0ros</title>
+    <style>
+        @font-face {
+            font-family: 'Gelio Fasolada';
+            src: url('fonts/Gelio Fasolada.ttf') format('truetype');
+        }
+        body { min-height:100vh; margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f7f9fb; }
+        header { background:rgba(255,255,255,0.95); padding:1.5rem; text-align:center; border-bottom:1px solid #ddd; }
+        nav { text-align:center; margin:0.8rem 0; }
+        nav a { margin:0 1rem; color:#2d3a4b; text-decoration:none; font-family: 'Gelio Fasolada', 'Georgia', serif; }
+        main { max-width:700px; margin:2rem auto; background:#fff; padding:2rem; border-radius:10px; }
+        h1 { font-family: 'Gelio Fasolada', 'Georgia', serif; font-size:2rem; }
+        .site-logo { height:157px; max-width:100%; vertical-align:middle; }
+        h2 { font-family: 'Gelio Fasolada', 'Georgia', serif; color:#495057; }
+        .grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+        .card { border:1px solid #e6e6e6; padding:1rem; border-radius:8px; background:#fff; transition: box-shadow 0.2s; }
+        .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .card a { color: #0077b6; text-decoration: none; font-weight: bold; }
+        .card a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            header { padding:1rem; }
+            nav { margin:0.5rem 0; }
+            nav a { margin:0 0.5rem; font-size:1rem; }
+            main { margin:1rem auto; padding:1rem; }
+            h1 { font-size:1.5rem; }
+            .site-logo { height:100px; }
+            h2 { margin-top:1rem; }
+            .grid { grid-template-columns:1fr; }
+            .card { padding:0.5rem; }
+            footer { margin:1rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/"><img src="logo.png" alt="Emp0ros — Releases" class="site-logo"></a></h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/items.html">Items</a>
+        <a href="/releases.html">Releases</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    <main>
+        <h2>Software Releases</h2>
+        <div class="grid">
+            <div class="card">
+                <strong>PS3 Devkit Nippon Ichi debug build</strong><br>
+                Debug build for PS3 development kit.<br>
+                <em>Credits to: team emp0ros</em><br>
+                <em>Release Date: 27/04/2026</em><br>
+                <a href="https://limewire.com/d/Z9bV9#1dL5w1wulY">Download</a>
+            </div>
+        </div>
+    </main>
+    <footer style="text-align:center;color:#9aa; margin:2rem 0">&copy; <span id="current-year"></span> Emp0ros</footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
